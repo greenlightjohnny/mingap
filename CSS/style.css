@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=ABeeZee|Courgette|Lemonada|Lilita+One|Macondo+Swash+Caps|Montserrat|Rubik|Satisfy|Ubuntu");
+/******pic colors ******/
 * {
   padding: 0;
   margin: 0;
@@ -7,7 +8,7 @@
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #242424;
+  background: #f9f9f9;
   font-family: 'montserrat';
 }
 
@@ -70,9 +71,12 @@ nav .logo {
 
 nav ul {
   list-style-type: none;
-  margin-top: 10%;
-  margin-bottom: 5%;
-  display: none;
+  visibility: hidden;
+  position: absolute;
+  -webkit-transition: all ease-in .6s;
+  transition: all ease-in .6s;
+  -webkit-transform: translateY(-500%);
+          transform: translateY(-500%);
 }
 
 nav ul a {
@@ -111,11 +115,28 @@ nav .ham .fa-times {
   display: inline-block;
 }
 
+.showNav {
+  position: static;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  visibility: visible;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
 .stickyNav {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 100%;
+}
+
+.blurBackground {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.whiteStandout {
+  color: #fff;
 }
 
 /**************************************************************************
@@ -142,7 +163,7 @@ nav .ham .fa-times {
 /**************************************************************************
 *********************** ABOUT *****************************************/
 .about {
-  background: #fdfdfd;
+  background: #f4f4fc;
 }
 
 .about h2 {
@@ -160,5 +181,124 @@ nav .ham .fa-times {
 
 .about h3 {
   text-align: center;
+}
+
+@media (min-width: 811px) {
+  .about article div {
+    background: #d37f70;
+    margin: 1rem;
+    margin-bottom: -7rem;
+    border-radius: 9px;
+    -webkit-box-shadow: 0px 6px 10px #000000;
+            box-shadow: 0px 6px 10px #000000;
+  }
+}
+
+@media (min-width: 550px) {
+  .about article {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 811px) {
+  .about article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+/**************************************************************************
+*********************** STORE *****************************************/
+.store {
+  background: #f2e852;
+}
+
+@media (min-width: 811px) {
+  .store {
+    padding-top: 7rem;
+  }
+}
+
+.store h2 {
+  text-align: center;
+  font-weight: 3rem;
+  text-transform: uppercase;
+  font-family: 'ubuntu';
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.store h3 {
+  text-align: center;
+}
+
+.store p {
+  padding: 5px 15px 30px 15px;
+}
+
+/**************************************************************************
+*********************** Contact *****************************************/
+.contact {
+  background: #242424;
+  color: #f4f4f4;
+}
+
+.contact .form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contact a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #f4f4f4;
+}
+
+.contact input {
+  display: block;
+  width: 100%;
+  margin-bottom: 5%;
+  border-radius: 7px;
+  font-size: 2rem;
+  border-style: outset;
+}
+
+.contact #button {
+  background: #FFF;
+  border-color: #23a1a6;
+  font-weight: bold;
+  color: #000;
+}
+
+.contact textarea {
+  width: 100%;
+  margin-bottom: 5%;
+  font-size: 2rem;
+  border-radius: 10px;
+  min-height: 5rem;
+}
+
+.contact h2 {
+  text-align: center;
+  font-weight: 3rem;
+  text-transform: uppercase;
+  font-family: 'ubuntu';
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.contact p {
+  padding: 5px 15px 30px 15px;
+}
+
+/**************************************************************************
+*********************** Footer *****************************************/
+footer input {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

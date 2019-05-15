@@ -2,6 +2,22 @@
 @import url('https://fonts.googleapis.com/css?family=ABeeZee|Courgette|Lemonada|Lilita+One|Macondo+Swash+Caps|Montserrat|Rubik|Satisfy|Ubuntu');
 
 
+$screen-tablet: 550px;
+$screen-tablet-large: 811px;
+$screen-desktop: 1050px;
+$screen-desktop-large: 1300px;
+
+@mixin tablet {
+    @media(min-width: #{$screen-tablet}) {
+        @content;
+    }
+}
+
+@mixin tabletLarge {
+    @media(min-width: #{$screen-tablet-large}) {
+        @content;
+    }
+}
 @mixin sectionHeading {
     text-align: center;
     font-weight: 3rem;
@@ -24,6 +40,19 @@ $offblack: #242424;
 $offwhitetwo: #fdfdfd;
 $offwhitethree: #f9f9f9;
 
+/******pic colors ******/
+$picblue: #4886d9;
+$picgreen: #1ca658;
+$picyellow: #f2e852;
+$picorange: #d97218;
+$picred: #d9320d;
+
+$comppurple: #9490f4;
+$compgrey: #7B8C68;
+$compgreen: #7BBF2E;
+
+$compblue: #23a1a6;
+
 
 * {
     padding: 0;
@@ -32,7 +61,7 @@ $offwhitethree: #f9f9f9;
 
 body {
     box-sizing: border-box;
-    background: #242424;
+    background: $offwhitethree;
     font-family: 'montserrat';
 }
 
@@ -88,15 +117,17 @@ nav {
 
     ul {
         list-style-type: none;
-        margin-top: 10%;
-        margin-bottom: 5%;
-        display: none;
-
+        visibility: hidden;
+        position: absolute;
+        transition: all ease-in .6s;
+        transform: translateY(-500%);
+        
         a {
             text-decoration: none;
             font-size: 1.5rem;
             font-weight: bold;
             color: $offblack;
+            
         }
     }
 
@@ -128,8 +159,20 @@ nav {
     display: none;
 }
 .show {
-    display: inline-block
+    display: inline-block;
+    
 }
+
+.showNav {
+    position: static;
+    transform: translateY(0);
+    visibility: visible;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+
+
 
 
 
@@ -137,6 +180,13 @@ nav {
     position: sticky;
     top: 0;
     width: 100%
+}
+
+.blurBackground {
+    background: rgba(255, 255, 255, .9);
+}
+.whiteStandout {
+    color: #fff;
 }
 /**************************************************************************
 *********************** ARTICLES *****************************************/
@@ -155,12 +205,13 @@ nav {
     }
 }
 
-
 /**************************************************************************
 *********************** ABOUT *****************************************/
 
+
 .about {
-    background: $offwhitetwo;
+    background: #f4f4fc;
+    
     
 
     h2 {
@@ -173,5 +224,119 @@ nav {
 
     h3 {
         @include subHeading;
+    }
+
+    article {
+
+        div {
+
+            @include tabletLarge {
+            background: #d37f70;
+            margin: 1rem;
+            margin-bottom: -7rem;
+            border-radius: 9px;
+            box-shadow: 0px 6px 10px #000000;
+            }
+        }
+        @include tablet {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        @include tabletLarge {
+            display: flex;
+            flex: 1;
+
+        }
+
+    }
+}
+
+/**************************************************************************
+*********************** STORE *****************************************/
+
+.store {
+    background: $picyellow;
+
+    @include tabletLarge {
+        padding-top: 7rem;
+    }
+    
+    h2 {
+        @include sectionHeading;
+    }
+
+    h3 {
+        @include subHeading;
+    }
+
+    p {
+        @include paragraphPadding;
+    }
+}
+
+
+
+/**************************************************************************
+*********************** Contact *****************************************/
+
+.contact {
+    background: $offblack;
+    color: $offwhite;
+
+    .form {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: $offwhite
+    }
+    #contactform {
+        
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        margin-bottom: 5%;
+        border-radius: 7px;
+        font-size: 2rem;
+        border-style: outset;
+    }
+
+    #button {
+        background: #FFF;
+        border-color: $compblue;
+        font-weight: bold;
+        color: #000;
+    }
+
+    textarea {
+        width: 100%;
+        margin-bottom: 5%;
+        font-size: 2rem;
+        border-radius: 10px;
+        min-height: 5rem;
+    }
+
+    h2 {
+        @include sectionHeading;
+    }
+
+    p {
+        @include paragraphPadding();
+    }
+}
+
+/**************************************************************************
+*********************** Footer *****************************************/
+
+footer {
+
+    input {
+        display: block;
     }
 }

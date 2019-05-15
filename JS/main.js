@@ -40,10 +40,14 @@ let bars = document.querySelector('.open');
 let close = document.querySelector('.close');
 
 
+
+
 function toggleMenu() {
-    navMenu.classList.toggle('show');
+    navMenu.classList.toggle('showNav');
+    
     bars.classList.toggle('hide');
     close.classList.toggle('show');
+    
 
 }
 

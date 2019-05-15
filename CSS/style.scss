@@ -1,0 +1,177 @@
+
+@import url('https://fonts.googleapis.com/css?family=ABeeZee|Courgette|Lemonada|Lilita+One|Macondo+Swash+Caps|Montserrat|Rubik|Satisfy|Ubuntu');
+
+
+@mixin sectionHeading {
+    text-align: center;
+    font-weight: 3rem;
+    text-transform: uppercase;
+    font-family: 'ubuntu';
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+@mixin paragraphPadding {
+    padding: 5px 15px 30px 15px;
+}
+
+@mixin subHeading {
+    text-align: center;
+}
+
+$offwhite: #f4f4f4;
+$offblack: #242424;
+$offwhitetwo: #fdfdfd;
+$offwhitethree: #f9f9f9;
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background: #242424;
+    font-family: 'montserrat';
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    background: url(/IMG/art50-min.jpg);
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-attachment: fixed;
+    
+    img {
+        display: inline-block;
+    }
+
+    .opacityAnchor {
+        position: relative;
+        top: 40%;
+    }
+
+    h2 {
+        text-align: center;
+        font-weight: bold;
+        color: $offwhite;
+        font-family: 'courgette';
+        font-size: 5rem;
+        position: relative;
+        top: 40%;
+    }
+}
+
+
+
+/**************************************************************************
+*********************** MAIN **********************************************/
+.anch {
+    display: none;
+}
+nav {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    background: #fff;
+
+    .logo {
+        margin: 1rem 0 1rem 10%;
+    }
+
+    ul {
+        list-style-type: none;
+        margin-top: 10%;
+        margin-bottom: 5%;
+        display: none;
+
+        a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: $offblack;
+        }
+    }
+
+    li {
+        padding-top: 1rem;
+    }
+
+    
+
+    .ham {
+        margin: 1rem 10% 1rem 0;
+        font-size: 2rem;
+
+        a {
+            color: $offblack;
+        }
+        
+        .fa-times {
+            color: red;
+        }
+    }
+}
+
+.close {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+.show {
+    display: inline-block
+}
+
+
+
+.stickyNav {
+    position: sticky;
+    top: 0;
+    width: 100%
+}
+/**************************************************************************
+*********************** ARTICLES *****************************************/
+
+
+.articles {
+    height: 150vh;
+    background: linear-gradient(#fff, $offwhitethree);
+    
+    h2 {
+        @include sectionHeading;
+    }
+
+    p {
+        @include paragraphPadding;
+    }
+}
+
+
+/**************************************************************************
+*********************** ABOUT *****************************************/
+
+.about {
+    background: $offwhitetwo;
+    
+
+    h2 {
+        @include sectionHeading;
+    }
+
+    p {
+        @include paragraphPadding;
+    }
+
+    h3 {
+        @include subHeading;
+    }
+}

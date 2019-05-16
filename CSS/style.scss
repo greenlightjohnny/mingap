@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Karla|Lemon|Montserrat|Rubik|Tangerine');
 
-@import url('https://fonts.googleapis.com/css?family=ABeeZee|Courgette|Lemonada|Lilita+One|Macondo+Swash+Caps|Montserrat|Rubik|Satisfy|Ubuntu');
+
+
 
 
 $screen-tablet: 550px;
@@ -20,9 +22,11 @@ $screen-desktop-large: 1300px;
 }
 @mixin sectionHeading {
     text-align: center;
-    font-weight: 3rem;
+    
     text-transform: uppercase;
-    font-family: 'ubuntu';
+    font-family: 'rubik';
+    font-size: 3rem;
+    letter-spacing: .1rem;
     padding-top: 3rem;
     padding-bottom: 2rem;
 }
@@ -33,6 +37,7 @@ $screen-desktop-large: 1300px;
 
 @mixin subHeading {
     text-align: center;
+    font-size: 2rem;
 }
 
 $offwhite: #f4f4f4;
@@ -91,7 +96,7 @@ header {
         text-align: center;
         font-weight: bold;
         color: $offwhite;
-        font-family: 'courgette';
+        font-family: 'tangerine';
         font-size: 5rem;
         position: relative;
         top: 40%;
@@ -210,20 +215,24 @@ nav {
 
 
 .about {
-    background: #f4f4fc;
+    background: #f4f4f4;
     
     
 
     h2 {
+        color: #0061ff;
         @include sectionHeading;
     }
 
     p {
+        color: $offblack;
         @include paragraphPadding;
     }
 
     h3 {
+        padding-top: 1rem;
         @include subHeading;
+        color: #0061FF;
     }
 
     article {
@@ -231,11 +240,13 @@ nav {
         div {
 
             @include tabletLarge {
-            background: #d37f70;
+            z-index: 2;
+            background: #fff;
             margin: 1rem;
             margin-bottom: -7rem;
             border-radius: 9px;
-            box-shadow: 0px 6px 10px #000000;
+            box-shadow:  0 3px 10px rgba(50,50,50,0.05);
+           /* box-shadow: 0px 6px 10px #000000; */
             }
         }
         @include tablet {
@@ -256,10 +267,18 @@ nav {
 *********************** STORE *****************************************/
 
 .store {
-    background: $picyellow;
+    background: #9c9c8c7a;
+    transform: skewY(15deg);
 
     @include tabletLarge {
         padding-top: 7rem;
+    }
+
+    .storeTop {
+        @include tablet {
+            width: 90%;
+            margin: 0 auto;
+        }
     }
     
     h2 {
@@ -271,6 +290,7 @@ nav {
     }
 
     p {
+        color: $offwhite;
         @include paragraphPadding;
     }
 }
@@ -284,9 +304,34 @@ nav {
     background: $offblack;
     color: $offwhite;
 
+    .contactFlex {
+        @include tabletLarge {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex: 1;
+        }
+    }
+
+    .contactTop {
+        @include tablet {
+            width: 90%;
+            
+            margin:0 auto;
+        }
+        @include tabletLarge {
+            margin: 0 1rem 0 1rem;
+        }
+    }
     .form {
         width: 90%;
         margin: 0 auto;
+
+        @include tabletLarge {
+            width: 100%;
+            margin: 0 1rem 0 1rem;
+        }
+
     }
 
     a {

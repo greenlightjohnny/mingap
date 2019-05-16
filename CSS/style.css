@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=ABeeZee|Courgette|Lemonada|Lilita+One|Macondo+Swash+Caps|Montserrat|Rubik|Satisfy|Ubuntu");
+@import url("https://fonts.googleapis.com/css?family=Anton|Karla|Lemon|Montserrat|Rubik|Tangerine");
 /******pic colors ******/
 * {
   padding: 0;
@@ -40,7 +40,7 @@ header h2 {
   text-align: center;
   font-weight: bold;
   color: #f4f4f4;
-  font-family: 'courgette';
+  font-family: 'tangerine';
   font-size: 5rem;
   position: relative;
   top: 40%;
@@ -149,9 +149,10 @@ nav .ham .fa-times {
 
 .articles h2 {
   text-align: center;
-  font-weight: 3rem;
   text-transform: uppercase;
-  font-family: 'ubuntu';
+  font-family: 'rubik';
+  font-size: 3rem;
+  letter-spacing: .1rem;
   padding-top: 3rem;
   padding-bottom: 2rem;
 }
@@ -163,34 +164,42 @@ nav .ham .fa-times {
 /**************************************************************************
 *********************** ABOUT *****************************************/
 .about {
-  background: #f4f4fc;
+  background: #f4f4f4;
 }
 
 .about h2 {
+  color: #0061ff;
   text-align: center;
-  font-weight: 3rem;
   text-transform: uppercase;
-  font-family: 'ubuntu';
+  font-family: 'rubik';
+  font-size: 3rem;
+  letter-spacing: .1rem;
   padding-top: 3rem;
   padding-bottom: 2rem;
 }
 
 .about p {
+  color: #242424;
   padding: 5px 15px 30px 15px;
 }
 
 .about h3 {
+  padding-top: 1rem;
   text-align: center;
+  font-size: 2rem;
+  color: #0061FF;
 }
 
 @media (min-width: 811px) {
   .about article div {
-    background: #d37f70;
+    z-index: 2;
+    background: #fff;
     margin: 1rem;
     margin-bottom: -7rem;
     border-radius: 9px;
-    -webkit-box-shadow: 0px 6px 10px #000000;
-            box-shadow: 0px 6px 10px #000000;
+    -webkit-box-shadow: 0 3px 10px rgba(50, 50, 50, 0.05);
+            box-shadow: 0 3px 10px rgba(50, 50, 50, 0.05);
+    /* box-shadow: 0px 6px 10px #000000; */
   }
 }
 
@@ -215,7 +224,9 @@ nav .ham .fa-times {
 /**************************************************************************
 *********************** STORE *****************************************/
 .store {
-  background: #f2e852;
+  background: #9c9c8c7a;
+  -webkit-transform: skewY(15deg);
+          transform: skewY(15deg);
 }
 
 @media (min-width: 811px) {
@@ -224,20 +235,30 @@ nav .ham .fa-times {
   }
 }
 
+@media (min-width: 550px) {
+  .store .storeTop {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
 .store h2 {
   text-align: center;
-  font-weight: 3rem;
   text-transform: uppercase;
-  font-family: 'ubuntu';
+  font-family: 'rubik';
+  font-size: 3rem;
+  letter-spacing: .1rem;
   padding-top: 3rem;
   padding-bottom: 2rem;
 }
 
 .store h3 {
   text-align: center;
+  font-size: 2rem;
 }
 
 .store p {
+  color: #f4f4f4;
   padding: 5px 15px 30px 15px;
 }
 
@@ -248,9 +269,42 @@ nav .ham .fa-times {
   color: #f4f4f4;
 }
 
+@media (min-width: 811px) {
+  .contact .contactFlex {
+    width: 90%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media (min-width: 550px) {
+  .contact .contactTop {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 811px) {
+  .contact .contactTop {
+    margin: 0 1rem 0 1rem;
+  }
+}
+
 .contact .form {
   width: 90%;
   margin: 0 auto;
+}
+
+@media (min-width: 811px) {
+  .contact .form {
+    width: 100%;
+    margin: 0 1rem 0 1rem;
+  }
 }
 
 .contact a {
@@ -285,9 +339,10 @@ nav .ham .fa-times {
 
 .contact h2 {
   text-align: center;
-  font-weight: 3rem;
   text-transform: uppercase;
-  font-family: 'ubuntu';
+  font-family: 'rubik';
+  font-size: 3rem;
+  letter-spacing: .1rem;
   padding-top: 3rem;
   padding-bottom: 2rem;
 }

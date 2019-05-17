@@ -40,7 +40,7 @@ let mobileNav = document.querySelector('.mobileNav');
 
 function slideIn() {
     
-    console.log(mobileNav);
+    
     mobileNav.classList.add('slideIn')
 }
 
@@ -48,7 +48,10 @@ function slideOut() {
     mobileNav.classList.remove('slideIn');
 }
 
+let items = document.querySelectorAll('.mobileNav a')
 
+
+items.forEach(i => i.addEventListener('click', slideOut));
 close.addEventListener('click', slideOut);
 ham.addEventListener('click', slideIn);
 

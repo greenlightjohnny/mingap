@@ -47,6 +47,13 @@ header h2 {
   }
 }
 
+.anchor {
+  display: block;
+  height: 2rem;
+  margin-top: -2rem;
+  visibility: hidden;
+}
+
 /**************************************************************************
 *********************** MAIN **********************************************/
 .anch {
@@ -441,7 +448,7 @@ header h2 {
 /**************************************************************************
 *********************** STORE *****************************************/
 .store {
-  background: #f1f00;
+  background: #272b2e;
   padding-bottom: 4rem;
 }
 
@@ -457,7 +464,6 @@ header h2 {
     margin: 0 auto;
   }
   .store .storeTop p {
-    background: #fff;
     width: 50%;
     margin: 0 auto;
     border-radius: 10px;
@@ -476,15 +482,19 @@ header h2 {
   letter-spacing: .1rem;
   padding-top: 3rem;
   padding-bottom: 2rem;
+  color: #f4f4f4;
+  padding-bottom: .5rem;
 }
 
 .store h3 {
   text-align: center;
   font-size: 2rem;
+  color: #f4f4f4;
+  font-size: 1.8rem;
 }
 
 .store p {
-  color: #242424;
+  color: #f4f4f4;
   padding: 5px 15px 30px 15px;
 }
 
@@ -493,6 +503,10 @@ header h2 {
 .contact {
   background: #242424;
   color: #f4f4f4;
+}
+
+.contact .padding {
+  padding: 0 15px 0 15px;
 }
 
 @media (min-width: 811px) {
@@ -517,7 +531,7 @@ header h2 {
 
 @media (min-width: 811px) {
   .contact .contactTop {
-    margin: 0 1rem 0 1rem;
+    margin: 0 2rem 0 2rem;
   }
 }
 
@@ -529,7 +543,7 @@ header h2 {
 @media (min-width: 811px) {
   .contact .form {
     width: 100%;
-    margin: 0 1rem 0 1rem;
+    margin: 0 2rem 0 2rem;
   }
 }
 
@@ -537,6 +551,10 @@ header h2 {
   text-decoration: none;
   font-size: 1.3rem;
   color: #f4f4f4;
+}
+
+.contact #contactform {
+  padding-bottom: 3rem;
 }
 
 .contact input {
@@ -554,6 +572,7 @@ header h2 {
   border-radius: 20px;
   font-weight: bold;
   color: #000;
+  margin-bottom: 0;
   border-style: outset;
 }
 
@@ -582,12 +601,21 @@ header h2 {
 }
 
 .contact p {
+  line-height: 1.7rem;
   padding: 5px 15px 30px 15px;
 }
 
 /**************************************************************************
 *********************** Footer *****************************************/
-footer input {
-  display: block;
+footer {
+  background-color: #353839;
+  color: #f4f4f4;
+}
+
+footer div {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

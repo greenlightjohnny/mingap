@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="icon" href="/IMG/favicon.ico" type="image/x-icon">
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,10 +28,10 @@
         </div>
             <ul id="desktopNav">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Articles</a></li>
-                <li><a href="#">Store</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#store">Store</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="ham">
                 <a href="#!" class="menu">
@@ -50,17 +51,17 @@
                             <i class="fas fa-times"></i>
                         </div>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Articles</a></li>
-                <li><a href="#">Store</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#navA">Articles</a></li>
+                <li><a href="#navAb">About</a></li>
+                <li><a href="#navS">Store</a></li>
+                <li><a href="#navC">Contact</a></li>
             </ul>
             
         </nav>
 
     <main>
-        
-        <section class="articles">
+        <div class="anchor" id="navA"></div>
+        <section class="articles" id="articles">
             <h2 id="tt">Articles</h2>
 
             <ul class="hexflex">
@@ -157,8 +158,8 @@
 
         </section>
 
-
-        <section class="about">
+        <div class="anchor" id="navAb"></div>
+        <section class="about" id="about">
             <h2>About</h2>
 
             <article>
@@ -181,24 +182,25 @@
                 </div>
             </article>
         </section>
-
-        <section class="store">
+        <div class="anchor" id="navS"></div>
+        <section class="store" id="store">
             <h2>Store</h2>
             <div class="storeTop">
-            <h3>Get your fix</h3>
+            <h3>We sell things. Sometimes.</h3>
             <p>We sell honey while our supplies last, usually sold out by January. Depending on the time of year we also have Queens and Nucs available for purchase. Shoot us a message using the contact form to see if we currently have it.</p>
             </div>
         </section>
-
-        <section class="contact">
+        <div class="anchor" id="navC"></div>
+        <section class="contact" id="contact">
             <h2>Contact</h2>
             <div class="contactFlex">
                 <div class="contactTop">
                     <p>We love hearing from people! If you have any questions, feedback, or a good 'ol fashioned death threat, please fill out the form below. We also left our landline number (our central farm and colony locations have no cell service) if you feel like starting a game of phone tag. <br>
-                    
+                    <div class="padding">
                     &phone;: <a href="tel:+01-540-222-2222">(540) 333-3333</a><br>
                             
                     &#9993;: <a href="mailto:mingap@mingap.com">mingap@mingap.com</a>
+                    </div>
                     </p>
                 </div>
 
@@ -219,7 +221,11 @@
     </main>
 
     <footer>
+        <div>
 
+        
+        &copy 2019, Minimal Gap
+     </div>
     </footer>
     
     <script src="/JS/main.js"></script>

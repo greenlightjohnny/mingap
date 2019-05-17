@@ -106,6 +106,12 @@ header {
 }
 
 
+.anchor {
+    display: block;
+    height: 2rem;
+    margin-top: -2rem;
+    visibility: hidden;
+}
 
 /**************************************************************************
 *********************** MAIN **********************************************/
@@ -489,7 +495,7 @@ header {
 *********************** STORE *****************************************/
 
 .store {
-    background:#f1f00;
+    background: #272b2e;
     padding-bottom: 4rem;
 
 
@@ -507,7 +513,7 @@ header {
             margin: 0 auto;
 
             p {
-                background: #fff;
+                
                 width: 50%;
                 margin: 0 auto;
                 border-radius: 10px;
@@ -524,14 +530,18 @@ header {
     
     h2 {
         @include sectionHeading;
+        color: $offwhite;
+        padding-bottom: .5rem;
     }
 
     h3 {
         @include subHeading;
+        color: $offwhite;
+        font-size: 1.8rem;
     }
 
     p {
-        color: $offblack;
+        color: $offwhite;
         @include paragraphPadding;
     }
 }
@@ -544,6 +554,9 @@ header {
 .contact {
     background: $offblack;
     color: $offwhite;
+    .padding {
+        padding: 0 15px 0 15px;
+    }
 
     .contactFlex {
         @include tabletLarge {
@@ -555,13 +568,15 @@ header {
     }
 
     .contactTop {
+
+        
         @include tablet {
             width: 90%;
             
             margin:0 auto;
         }
         @include tabletLarge {
-            margin: 0 1rem 0 1rem;
+            margin: 0 2rem 0 2rem;
         }
     }
     .form {
@@ -570,7 +585,7 @@ header {
 
         @include tabletLarge {
             width: 100%;
-            margin: 0 1rem 0 1rem;
+            margin: 0 2rem 0 2rem;
         }
 
     }
@@ -581,7 +596,7 @@ header {
         color: $offwhite
     }
     #contactform {
-        
+        padding-bottom: 3rem;
     }
 
     input {
@@ -599,7 +614,9 @@ header {
         border-radius: 20px;
         font-weight: bold;
         color: #000;
+        margin-bottom: 0;
         border-style: outset;
+        
 
         @include tablet {
             width: 12rem;
@@ -619,7 +636,9 @@ header {
     }
 
     p {
+        line-height: 1.7rem;
         @include paragraphPadding();
+        
     }
 }
 
@@ -628,7 +647,13 @@ header {
 
 footer {
 
-    input {
-        display: block;
-    }
+        background-color: #353839;
+        color: $offwhite;
+        
+        div {
+            width: 90%;
+            margin: 0 auto;
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+        }
 }

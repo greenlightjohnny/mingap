@@ -95,9 +95,13 @@ header {
         font-weight: bold;
         color: $offwhite;
         font-family: 'tangerine';
-        font-size: 5rem;
+        font-size: 4rem;
         position: relative;
-        top: 40%;
+        top: 30%;
+
+        @include tablet {
+            font-size: 8rem;
+        }
     }
 }
 
@@ -108,10 +112,12 @@ header {
 .anch {
     display: none;
 }
-nav {
+#mainNav {
     display: flex;
     flex: 1;
     justify-content: space-between;
+    
+    align-items: center;
     background: #fff;
     z-index: 2;
 
@@ -121,9 +127,12 @@ nav {
 
     ul {
         list-style-type: none;
+        margin-right: 10%;
         display: none;
+        @include tabletLarge {
+            display: inline-block;
+        }
         
-        transition: all ease-in .6s;
     
         
         a {
@@ -136,7 +145,9 @@ nav {
     }
 
     li {
-        padding-top: 1rem;
+        
+        display: inline-block;
+        margin-left: 1rem;
     }
 
     
@@ -144,6 +155,9 @@ nav {
     .ham {
         margin: 1rem 10% 1rem 0;
         font-size: 2rem;
+        @include tabletLarge {
+            display: none;
+        }
 
         a {
             color: $offblack;
@@ -155,6 +169,54 @@ nav {
     }
 }
 
+.mobileNav {
+    z-index: 3;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    transition: all ease 0.5s;
+    
+
+    ul {
+        list-style-type: none;
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    li {
+        color: $offwhite;
+        margin-top: 2rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $offwhite;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+
+.slideX {
+    position: absolute;
+    top: 1rem;
+    left: 88%;
+
+    color: red;
+    font-size: 3rem;
+    
+}
+
+
+
+.slideIn {
+    transform: translateX(0) !important;
+}
+
+
 .close {
     display: none;
 }
@@ -162,18 +224,7 @@ nav {
 .hide {
     display: none;
 }
-.show {
-    display: inline-block;
-    
-}
 
-.showNav {
-    position: static;
-    
-    display: block;
-    margin-top: 10%;
-    margin-bottom: 5%;
-}
 
 
 
@@ -197,7 +248,7 @@ nav {
 
 
 .articles {
-    height: 150vh;
+    padding-bottom: 4rem;
     background: linear-gradient(#fff, $offwhitethree);
     
     #tt {
@@ -209,7 +260,7 @@ nav {
     }
 }
 
-
+/***************************** CODE FROM https://github.com/web-tiki/responsive-grid-of-hexagons *****************/
 .hexflex {
     display: flex;
     flex-wrap: wrap;
@@ -382,12 +433,12 @@ nav {
 
 
 .about {
-    background: #f4f4f4;
+    background: #fdfdfd ;
     
     
 
     h2 {
-        color: #0061ff;
+        color: $offblack;
         @include sectionHeading;
     }
 
@@ -399,7 +450,11 @@ nav {
     h3 {
         padding-top: 1rem;
         @include subHeading;
-        color: #0061FF;
+        color: $offblack;
+       
+    }
+    .fas  {
+        color: #4886d9;
     }
 
     article {
@@ -407,7 +462,7 @@ nav {
         div {
 
             @include tabletLarge {
-            z-index: 2;
+            z-index: 1;
             background: #fff;
             margin: 1rem;
             margin-bottom: -7rem;
@@ -434,17 +489,36 @@ nav {
 *********************** STORE *****************************************/
 
 .store {
-    background: #9c9c8c7a;
-    transform: skewY(15deg);
+    background:#f1f00;
+    padding-bottom: 4rem;
+
+
+
 
     @include tabletLarge {
         padding-top: 7rem;
     }
 
     .storeTop {
+
+
         @include tablet {
             width: 90%;
             margin: 0 auto;
+
+            p {
+                background: #fff;
+                width: 50%;
+                margin: 0 auto;
+                border-radius: 10px;
+                box-shadow:  0 3px 10px rgba(50,50,50,0.05);
+                padding-top: 1rem;
+                margin-top: 1rem;
+                
+                
+                
+
+            }
         }
     }
     
@@ -457,7 +531,7 @@ nav {
     }
 
     p {
-        color: $offwhite;
+        color: $offblack;
         @include paragraphPadding;
     }
 }
@@ -520,10 +594,16 @@ nav {
     }
 
     #button {
-        background: #FFF;
-        border-color: $compblue;
+        background: rgb(213, 245, 71);
+        border-color: rgb(213, 245, 71);
+        border-radius: 20px;
         font-weight: bold;
         color: #000;
+        border-style: outset;
+
+        @include tablet {
+            width: 12rem;
+        }
     }
 
     textarea {

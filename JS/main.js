@@ -17,7 +17,7 @@ function fadeOnScroll() {
 
 /////////////// STICK NAV ////////////////////////////
 
-const nav = document.querySelector('nav');
+const nav = document.querySelector('#mainNav');
 
 
 function stickyNav() {
@@ -34,23 +34,23 @@ function stickyNav() {
 ////////////////////////////// MOBILE MENU OPEN CLOSE /////////////////////
 
 
-let toggle = document.querySelector('.ham');
-let navMenu = document.querySelector('ul');
-let bars = document.querySelector('.open');
-let close = document.querySelector('.close');
+let ham = document.querySelector('.ham');
+let close = document.querySelector('.slideX')
+let mobileNav = document.querySelector('.mobileNav');
 
-
-
-
-function toggleMenu() {
-    navMenu.classList.toggle('showNav');
+function slideIn() {
     
-    bars.classList.toggle('hide');
-    close.classList.toggle('show');
-    
-
+    console.log(mobileNav);
+    mobileNav.classList.add('slideIn')
 }
 
-toggle.addEventListener('click', toggleMenu);
+function slideOut() {
+    mobileNav.classList.remove('slideIn');
+}
+
+
+close.addEventListener('click', slideOut);
+ham.addEventListener('click', slideIn);
+
 window.addEventListener('scroll', stickyNav);
 window.addEventListener('scroll', fadeOnScroll);

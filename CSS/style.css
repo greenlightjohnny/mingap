@@ -36,9 +36,15 @@ header h2 {
   font-weight: bold;
   color: #f4f4f4;
   font-family: 'tangerine';
-  font-size: 5rem;
+  font-size: 4rem;
   position: relative;
-  top: 40%;
+  top: 30%;
+}
+
+@media (min-width: 550px) {
+  header h2 {
+    font-size: 8rem;
+  }
 }
 
 /**************************************************************************
@@ -47,7 +53,7 @@ header h2 {
   display: none;
 }
 
-nav {
+#mainNav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,43 +63,103 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #fff;
   z-index: 2;
 }
 
-nav .logo {
+#mainNav .logo {
   margin: 1rem 0 1rem 10%;
 }
 
-nav ul {
+#mainNav ul {
   list-style-type: none;
+  margin-right: 10%;
   display: none;
-  -webkit-transition: all ease-in .6s;
-  transition: all ease-in .6s;
 }
 
-nav ul a {
+@media (min-width: 811px) {
+  #mainNav ul {
+    display: inline-block;
+  }
+}
+
+#mainNav ul a {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
   color: #242424;
 }
 
-nav li {
-  padding-top: 1rem;
+#mainNav li {
+  display: inline-block;
+  margin-left: 1rem;
 }
 
-nav .ham {
+#mainNav .ham {
   margin: 1rem 10% 1rem 0;
   font-size: 2rem;
 }
 
-nav .ham a {
+@media (min-width: 811px) {
+  #mainNav .ham {
+    display: none;
+  }
+}
+
+#mainNav .ham a {
   color: #242424;
 }
 
-nav .ham .fa-times {
+#mainNav .ham .fa-times {
   color: red;
+}
+
+.mobileNav {
+  z-index: 3;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.mobileNav ul {
+  list-style-type: none;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.mobileNav li {
+  color: #f4f4f4;
+  margin-top: 2rem;
+}
+
+.mobileNav a {
+  text-decoration: none;
+  color: #f4f4f4;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.slideX {
+  position: absolute;
+  top: 1rem;
+  left: 88%;
+  color: red;
+  font-size: 3rem;
+}
+
+.slideIn {
+  -webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
 }
 
 .close {
@@ -102,17 +168,6 @@ nav .ham .fa-times {
 
 .hide {
   display: none;
-}
-
-.show {
-  display: inline-block;
-}
-
-.showNav {
-  position: static;
-  display: block;
-  margin-top: 10%;
-  margin-bottom: 5%;
 }
 
 .stickyNav {
@@ -133,7 +188,7 @@ nav .ham .fa-times {
 /**************************************************************************
 *********************** ARTICLES *****************************************/
 .articles {
-  height: 150vh;
+  padding-bottom: 4rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f9f9f9));
   background: linear-gradient(#fff, #f9f9f9);
 }
@@ -152,6 +207,7 @@ nav .ham .fa-times {
   padding: 5px 15px 30px 15px;
 }
 
+/***************************** CODE FROM https://github.com/web-tiki/responsive-grid-of-hexagons *****************/
 .hexflex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -321,11 +377,11 @@ nav .ham .fa-times {
 /**************************************************************************
 *********************** ABOUT *****************************************/
 .about {
-  background: #f4f4f4;
+  background: #fdfdfd;
 }
 
 .about h2 {
-  color: #0061ff;
+  color: #242424;
   text-align: center;
   text-transform: uppercase;
   font-family: 'rubik';
@@ -344,12 +400,16 @@ nav .ham .fa-times {
   padding-top: 1rem;
   text-align: center;
   font-size: 2rem;
-  color: #0061FF;
+  color: #242424;
+}
+
+.about .fas {
+  color: #4886d9;
 }
 
 @media (min-width: 811px) {
   .about article div {
-    z-index: 2;
+    z-index: 1;
     background: #fff;
     margin: 1rem;
     margin-bottom: -7rem;
@@ -381,9 +441,8 @@ nav .ham .fa-times {
 /**************************************************************************
 *********************** STORE *****************************************/
 .store {
-  background: #9c9c8c7a;
-  -webkit-transform: skewY(15deg);
-          transform: skewY(15deg);
+  background: #f1f00;
+  padding-bottom: 4rem;
 }
 
 @media (min-width: 811px) {
@@ -396,6 +455,16 @@ nav .ham .fa-times {
   .store .storeTop {
     width: 90%;
     margin: 0 auto;
+  }
+  .store .storeTop p {
+    background: #fff;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 3px 10px rgba(50, 50, 50, 0.05);
+            box-shadow: 0 3px 10px rgba(50, 50, 50, 0.05);
+    padding-top: 1rem;
+    margin-top: 1rem;
   }
 }
 
@@ -415,7 +484,7 @@ nav .ham .fa-times {
 }
 
 .store p {
-  color: #f4f4f4;
+  color: #242424;
   padding: 5px 15px 30px 15px;
 }
 
@@ -480,10 +549,18 @@ nav .ham .fa-times {
 }
 
 .contact #button {
-  background: #FFF;
-  border-color: #23a1a6;
+  background: #d5f547;
+  border-color: #d5f547;
+  border-radius: 20px;
   font-weight: bold;
   color: #000;
+  border-style: outset;
+}
+
+@media (min-width: 550px) {
+  .contact #button {
+    width: 12rem;
+  }
 }
 
 .contact textarea {

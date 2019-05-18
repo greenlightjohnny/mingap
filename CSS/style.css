@@ -43,6 +43,12 @@ header h2 {
 
 @media (min-width: 550px) {
   header h2 {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 811px) {
+  header h2 {
     font-size: 8rem;
   }
 }
@@ -57,7 +63,7 @@ header h2 {
 /**************************************************************************
 *********************** MAIN **********************************************/
 .anch {
-  display: none;
+  visibility: hidden;
 }
 
 #mainNav {
@@ -75,10 +81,19 @@ header h2 {
           align-items: center;
   background: #fff;
   z-index: 2;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
 }
 
 #mainNav .logo {
   margin: 1rem 0 1rem 10%;
+}
+
+#mainNav .logo img {
+  position: center;
+  width: 50px;
+  height: auto;
+  color: #4886d9;
 }
 
 #mainNav ul {
@@ -98,6 +113,10 @@ header h2 {
   font-size: 1.5rem;
   font-weight: bold;
   color: #242424;
+}
+
+#mainNav ul a:hover {
+  color: #4886d9;
 }
 
 #mainNav li {
@@ -182,6 +201,8 @@ header h2 {
   position: sticky;
   top: 0;
   width: 100%;
+  -webkit-box-shadow: 0px 1px 10px #999;
+          box-shadow: 0px 1px 10px #999;
 }
 
 .blurBackground {
@@ -208,6 +229,10 @@ header h2 {
   letter-spacing: .1rem;
   padding-top: 3rem;
   padding-bottom: 2rem;
+}
+
+.articles #tt .fas {
+  color: #4886d9;
 }
 
 .articles h3 {
@@ -399,6 +424,7 @@ header h2 {
 }
 
 .about p {
+  line-height: 1.7rem;
   color: #242424;
   padding: 5px 15px 30px 15px;
 }
@@ -486,6 +512,10 @@ header h2 {
   padding-bottom: .5rem;
 }
 
+.store h2 .fas {
+  color: #4886d9;
+}
+
 .store h3 {
   text-align: center;
   font-size: 2rem;
@@ -493,8 +523,14 @@ header h2 {
   font-size: 1.8rem;
 }
 
+.store h3 .some {
+  font-size: 1.3rem;
+  letter-spacing: .1rem;
+}
+
 .store p {
   color: #f4f4f4;
+  line-height: 1.7rem;
   padding: 5px 15px 30px 15px;
 }
 
@@ -522,6 +558,12 @@ header h2 {
   }
 }
 
+@media (min-width: 1201px) {
+  .contact .contactFlex {
+    width: 80%;
+  }
+}
+
 @media (min-width: 550px) {
   .contact .contactTop {
     width: 90%;
@@ -535,15 +577,28 @@ header h2 {
   }
 }
 
+@media (min-width: 1201px) {
+  .contact .contactTop {
+    margin: 0 5%;
+  }
+}
+
 .contact .form {
   width: 90%;
   margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @media (min-width: 811px) {
   .contact .form {
-    width: 100%;
     margin: 0 2rem 0 2rem;
+  }
+}
+
+@media (min-width: 1201px) {
+  .contact .form {
+    margin: 0 5%;
   }
 }
 
@@ -568,12 +623,11 @@ header h2 {
 
 .contact #button {
   background: #d5f547;
-  border-color: #d5f547;
+  border: none;
   border-radius: 20px;
   font-weight: bold;
   color: #000;
   margin-bottom: 0;
-  border-style: outset;
 }
 
 @media (min-width: 550px) {
@@ -598,6 +652,10 @@ header h2 {
   letter-spacing: .1rem;
   padding-top: 3rem;
   padding-bottom: 2rem;
+}
+
+.contact h2 .fas {
+  color: #4886d9;
 }
 
 .contact p {

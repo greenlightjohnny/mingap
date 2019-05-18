@@ -6,7 +6,7 @@
 
 $screen-tablet: 550px;
 $screen-tablet-large: 811px;
-$screen-desktop: 1050px;
+$screen-desktop: 1201px;
 $screen-desktop-large: 1300px;
 
 @mixin tablet {
@@ -17,6 +17,12 @@ $screen-desktop-large: 1300px;
 
 @mixin tabletLarge {
     @media(min-width: #{$screen-tablet-large}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media(min-width: #{$screen-desktop}) {
         @content;
     }
 }
@@ -100,8 +106,13 @@ header {
         top: 30%;
 
         @include tablet {
+            font-size: 6rem;
+        }
+        @include tabletLarge {
             font-size: 8rem;
         }
+
+       
     }
 }
 
@@ -116,7 +127,7 @@ header {
 /**************************************************************************
 *********************** MAIN **********************************************/
 .anch {
-    display: none;
+    visibility: hidden;
 }
 #mainNav {
     display: flex;
@@ -126,9 +137,20 @@ header {
     align-items: center;
     background: #fff;
     z-index: 2;
+    transition: all ease 1s;
 
     .logo {
         margin: 1rem 0 1rem 10%;
+        
+        
+
+        img {
+            position: center;
+            width: 50px;
+            height: auto;
+            color: #4886d9;
+            
+        }
     }
 
     ul {
@@ -147,6 +169,10 @@ header {
             font-weight: bold;
             color: $offblack;
             
+        }
+
+        a:hover {
+            color: #4886d9;
         }
     }
 
@@ -240,7 +266,8 @@ header {
 .stickyNav {
     position: sticky;
     top: 0;
-    width: 100%
+    width: 100%;
+  box-shadow: 0px 1px 10px #999;
 }
 
 .blurBackground {
@@ -259,6 +286,9 @@ header {
     
     #tt {
         @include sectionHeading;
+        .fas {
+            color:#4886d9;
+        }
     }
 
     h3 {
@@ -449,6 +479,7 @@ header {
     }
 
     p {
+        line-height: 1.7rem;
         color: $offblack;
         @include paragraphPadding;
     }
@@ -532,16 +563,24 @@ header {
         @include sectionHeading;
         color: $offwhite;
         padding-bottom: .5rem;
+        .fas {
+            color: #4886d9;
+        }
     }
 
     h3 {
         @include subHeading;
         color: $offwhite;
         font-size: 1.8rem;
+        .some {
+            font-size: 1.3rem;
+            letter-spacing: .1rem;
+        }
     }
 
     p {
         color: $offwhite;
+        line-height: 1.7rem;
         @include paragraphPadding;
     }
 }
@@ -565,6 +604,10 @@ header {
         display: flex;
         flex: 1;
         }
+
+        @include desktop {
+            width: 80%;
+        }
     }
 
     .contactTop {
@@ -578,14 +621,24 @@ header {
         @include tabletLarge {
             margin: 0 2rem 0 2rem;
         }
+
+        @include desktop {
+            margin: 0 5%;
+        }
     }
     .form {
         width: 90%;
         margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
 
         @include tabletLarge {
-            width: 100%;
+            
             margin: 0 2rem 0 2rem;
+        }
+
+        @include desktop {
+            margin: 0 5%;
         }
 
     }
@@ -610,12 +663,12 @@ header {
 
     #button {
         background: rgb(213, 245, 71);
-        border-color: rgb(213, 245, 71);
+        border: none;
         border-radius: 20px;
         font-weight: bold;
         color: #000;
         margin-bottom: 0;
-        border-style: outset;
+        
         
 
         @include tablet {
@@ -633,6 +686,10 @@ header {
 
     h2 {
         @include sectionHeading;
+        .fas {
+        color: #4886d9;
+
+        }
     }
 
     p {
@@ -657,3 +714,4 @@ footer {
             padding-top: 2rem;
         }
 }
+

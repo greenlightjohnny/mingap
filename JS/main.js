@@ -23,6 +23,7 @@ const nav = document.querySelector('#mainNav');
 function stickyNav() {
     const anch = document.querySelector('.anch');
     const anchPos = anch.offsetTop;
+    console.log(anchPos)
     const navPos = nav.offsetTop;
     if(window.pageYOffset >= anchPos) {
         nav.classList.add('stickyNav')

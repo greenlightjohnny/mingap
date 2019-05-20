@@ -29,7 +29,7 @@ $screen-desktop-large: 1300px;
 @mixin sectionHeading {
     text-align: center;
     
-    text-transform: uppercase;
+    
     font-family: 'rubik';
     font-size: 3rem;
     letter-spacing: .1rem;
@@ -63,6 +63,7 @@ $compgrey: #7B8C68;
 $compgreen: #7BBF2E;
 
 $compblue: #23a1a6;
+$accyellow: #d5f547;
 
 
 * {
@@ -76,7 +77,15 @@ body {
     font-family: 'montserrat';
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
 
 header {
     height: 100vh;
@@ -135,7 +144,7 @@ header {
     justify-content: space-between;
     
     align-items: center;
-    background: #fff;
+    background: $offblack;
     z-index: 2;
     transition: all ease 1s;
 
@@ -167,7 +176,7 @@ header {
             text-decoration: none;
             font-size: 1.5rem;
             font-weight: bold;
-            color: $offblack;
+            color: $offwhite;
             
         }
 
@@ -192,7 +201,7 @@ header {
         }
 
         a {
-            color: $offblack;
+            color: $offwhite;
         }
         
         .fa-times {
@@ -267,27 +276,23 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
-  box-shadow: 0px 1px 10px #999;
+  box-shadow: 0px 1px 10px #000;
 }
 
-.blurBackground {
-    background: rgba(255, 255, 255, .9);
-}
-.whiteStandout {
-    color: #fff;
-}
+
 /**************************************************************************
 *********************** ARTICLES *****************************************/
 
 
 .articles {
     padding-bottom: 4rem;
-    background: linear-gradient(#fff, $offwhitethree);
+    background: $offblack;
     
     #tt {
         @include sectionHeading;
+        color: $offwhite;
         .fas {
-            color:#4886d9;
+            color: $accyellow;
         }
     }
 
@@ -367,7 +372,7 @@ header {
     width: 100%;
     padding: 5%;
     box-sizing: border-box;
-    background-color: rgba(0, 128, 128, 0.8);
+    background-color: rgba(111, 102, 241, 0.8);
     transition: transform .2s ease-out, opacity .3s ease-out;
 }
 
@@ -469,38 +474,38 @@ header {
 
 
 .about {
-    background: #fdfdfd ;
+    background: #1d1c1c ;
     
     
 
     h2 {
-        color: $offblack;
+        color: $offwhite;
         @include sectionHeading;
     }
 
     p {
         line-height: 1.7rem;
-        color: $offblack;
+        color: $offwhite;
         @include paragraphPadding;
     }
 
     h3 {
         padding-top: 1rem;
         @include subHeading;
-        color: $offblack;
+        color: $offwhite;
        
     }
     .fas  {
-        color: #4886d9;
+        color: $accyellow;
     }
 
     article {
 
         div {
-
+            background: #1d1c1c;
             @include tabletLarge {
             z-index: 1;
-            background: #fff;
+            
             margin: 1rem;
             margin-bottom: -7rem;
             border-radius: 9px;
@@ -564,7 +569,7 @@ header {
         color: $offwhite;
         padding-bottom: .5rem;
         .fas {
-            color: #4886d9;
+            color: $accyellow;
         }
     }
 
@@ -612,6 +617,14 @@ header {
 
     .contactTop {
 
+        .phone {
+            color: $accyellow;
+            font-size: 2rem;
+        }
+
+        a:hover {
+            color: #4886d9;
+        }
         
         @include tablet {
             width: 90%;
@@ -659,6 +672,7 @@ header {
         border-radius: 7px;
         font-size: 2rem;
         border-style: outset;
+        font-family: 'montserrat';
     }
 
     #button {
@@ -668,11 +682,16 @@ header {
         font-weight: bold;
         color: #000;
         margin-bottom: 0;
+        cursor: pointer;
         
         
 
         @include tablet {
             width: 12rem;
+        }
+
+        #button:hover {
+            cursor: pointer;
         }
     }
 
@@ -687,7 +706,7 @@ header {
     h2 {
         @include sectionHeading;
         .fas {
-        color: #4886d9;
+        color: $accyellow;
 
         }
     }
@@ -712,6 +731,7 @@ footer {
             margin: 0 auto;
             padding-bottom: 2rem;
             padding-top: 2rem;
+            text-align: center;
         }
 }
 

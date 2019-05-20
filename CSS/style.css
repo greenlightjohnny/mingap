@@ -12,6 +12,16 @@ body {
   font-family: 'montserrat';
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 header {
   height: 100vh;
   width: 100%;
@@ -79,7 +89,7 @@ header h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #fff;
+  background: #242424;
   z-index: 2;
   -webkit-transition: all ease 1s;
   transition: all ease 1s;
@@ -112,7 +122,7 @@ header h2 {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #242424;
+  color: #f4f4f4;
 }
 
 #mainNav ul a:hover {
@@ -136,7 +146,7 @@ header h2 {
 }
 
 #mainNav .ham a {
-  color: #242424;
+  color: #f4f4f4;
 }
 
 #mainNav .ham .fa-times {
@@ -201,38 +211,29 @@ header h2 {
   position: sticky;
   top: 0;
   width: 100%;
-  -webkit-box-shadow: 0px 1px 10px #999;
-          box-shadow: 0px 1px 10px #999;
-}
-
-.blurBackground {
-  background: rgba(255, 255, 255, 0.9);
-}
-
-.whiteStandout {
-  color: #fff;
+  -webkit-box-shadow: 0px 1px 10px #000;
+          box-shadow: 0px 1px 10px #000;
 }
 
 /**************************************************************************
 *********************** ARTICLES *****************************************/
 .articles {
   padding-bottom: 4rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f9f9f9));
-  background: linear-gradient(#fff, #f9f9f9);
+  background: #242424;
 }
 
 .articles #tt {
   text-align: center;
-  text-transform: uppercase;
   font-family: 'rubik';
   font-size: 3rem;
   letter-spacing: .1rem;
   padding-top: 3rem;
   padding-bottom: 2rem;
+  color: #f4f4f4;
 }
 
 .articles #tt .fas {
-  color: #4886d9;
+  color: #d5f547;
 }
 
 .articles h3 {
@@ -312,7 +313,7 @@ header h2 {
   padding: 5%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: rgba(0, 128, 128, 0.8);
+  background-color: rgba(111, 102, 241, 0.8);
   -webkit-transition: opacity .3s ease-out, -webkit-transform .2s ease-out;
   transition: opacity .3s ease-out, -webkit-transform .2s ease-out;
   transition: transform .2s ease-out, opacity .3s ease-out;
@@ -409,13 +410,12 @@ header h2 {
 /**************************************************************************
 *********************** ABOUT *****************************************/
 .about {
-  background: #fdfdfd;
+  background: #1d1c1c;
 }
 
 .about h2 {
-  color: #242424;
+  color: #f4f4f4;
   text-align: center;
-  text-transform: uppercase;
   font-family: 'rubik';
   font-size: 3rem;
   letter-spacing: .1rem;
@@ -425,7 +425,7 @@ header h2 {
 
 .about p {
   line-height: 1.7rem;
-  color: #242424;
+  color: #f4f4f4;
   padding: 5px 15px 30px 15px;
 }
 
@@ -433,17 +433,20 @@ header h2 {
   padding-top: 1rem;
   text-align: center;
   font-size: 2rem;
-  color: #242424;
+  color: #f4f4f4;
 }
 
 .about .fas {
-  color: #4886d9;
+  color: #d5f547;
+}
+
+.about article div {
+  background: #1d1c1c;
 }
 
 @media (min-width: 811px) {
   .about article div {
     z-index: 1;
-    background: #fff;
     margin: 1rem;
     margin-bottom: -7rem;
     border-radius: 9px;
@@ -502,7 +505,6 @@ header h2 {
 
 .store h2 {
   text-align: center;
-  text-transform: uppercase;
   font-family: 'rubik';
   font-size: 3rem;
   letter-spacing: .1rem;
@@ -513,7 +515,7 @@ header h2 {
 }
 
 .store h2 .fas {
-  color: #4886d9;
+  color: #d5f547;
 }
 
 .store h3 {
@@ -562,6 +564,15 @@ header h2 {
   .contact .contactFlex {
     width: 80%;
   }
+}
+
+.contact .contactTop .phone {
+  color: #d5f547;
+  font-size: 2rem;
+}
+
+.contact .contactTop a:hover {
+  color: #4886d9;
 }
 
 @media (min-width: 550px) {
@@ -619,6 +630,7 @@ header h2 {
   border-radius: 7px;
   font-size: 2rem;
   border-style: outset;
+  font-family: 'montserrat';
 }
 
 .contact #button {
@@ -628,12 +640,17 @@ header h2 {
   font-weight: bold;
   color: #000;
   margin-bottom: 0;
+  cursor: pointer;
 }
 
 @media (min-width: 550px) {
   .contact #button {
     width: 12rem;
   }
+}
+
+.contact #button #button:hover {
+  cursor: pointer;
 }
 
 .contact textarea {
@@ -646,7 +663,6 @@ header h2 {
 
 .contact h2 {
   text-align: center;
-  text-transform: uppercase;
   font-family: 'rubik';
   font-size: 3rem;
   letter-spacing: .1rem;
@@ -655,7 +671,7 @@ header h2 {
 }
 
 .contact h2 .fas {
-  color: #4886d9;
+  color: #d5f547;
 }
 
 .contact p {
@@ -675,5 +691,6 @@ footer div {
   margin: 0 auto;
   padding-bottom: 2rem;
   padding-top: 2rem;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

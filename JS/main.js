@@ -8,7 +8,7 @@ function fadeOnScroll() {
         const opacity = (window.pageYOffset / opacityAnchor);
         
         const beeBackground = document.querySelector('#top');
-        beeBackground.style.background = "linear-gradient(rgba(255, 255, 255, " + (opacity / 2) + "), rgba(255, 255, 255, " + (opacity) + ")), url('./IMG/art50-min.jpg')", "background-position: center", "background-size: cover", "background-repeat: no-repeat";
+        beeBackground.style.background = "linear-gradient(rgba(36, 36, 36, " + (opacity / 2) + "), rgba(36, 36, 36, " + (opacity) + ")), url('./IMG/art50-min.jpg')", "background-position: center", "background-size: cover", "background-repeat: no-repeat";
     }
 }
 
